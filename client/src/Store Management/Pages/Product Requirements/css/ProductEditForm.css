@@ -1,0 +1,330 @@
+/* Main Form Container */
+.add-product-container {
+  max-width: 800px;
+  margin: 20px auto;
+  padding: 2rem;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+}
+
+.form-title {
+  text-align: center;
+  font-size: 1.8rem;
+  color: #333;
+  margin-bottom: 2rem;
+  border-bottom: 2px solid #eee;
+  padding-bottom: 1rem;
+}
+
+.add-product-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group label {
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  color: #555;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+  padding: 12px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font-size: 1rem;
+  transition: border-color 0.2s;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+  outline: none;
+  border-color: #0f9e99;
+}
+
+.disabled-input {
+  background-color: #f0f0f0;
+  color: #888;
+  cursor: not-allowed;
+}
+
+textarea {
+  resize: vertical;
+  min-height: 100px;
+}
+
+.form-checkboxes {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  align-items: center;
+  margin-top: 1rem;
+}
+
+.form-checkboxes label {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-weight: normal;
+}
+
+.form-checkboxes input[type="checkbox"] {
+  width: 18px;
+  height: 18px;
+}
+
+/* Image Upload Section */
+.image-preview-wrapper {
+  position: relative;
+  display: inline-block;
+  margin: 0.5rem;
+}
+
+.image-preview {
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+}
+
+.image-delete-btn {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  background: rgba(229, 71, 106, 0.8);
+  color: white;
+  border: none;
+  border-radius: 50%;
+  width: 25px;
+  height: 25px;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.2s;
+}
+
+.image-delete-btn:hover {
+  background: #e5476a;
+}
+
+.images-preview-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.hidden-file-input {
+  display: none;
+}
+
+.file-input-container {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-top: 0.5rem;
+}
+
+.custom-file-button {
+  background-color: #0f9e99;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.2s;
+}
+
+.custom-file-button:hover {
+  background-color: #0c7f7b;
+}
+
+.file-count {
+  font-size: 0.9rem;
+  color: #777;
+}
+
+/* Variants Section */
+.variants-section {
+  border: 1px dashed #ccc;
+  padding: 1.5rem;
+  border-radius: 12px;
+  margin-top: 1rem;
+}
+
+.variants-section h3 {
+  margin-top: 0;
+  font-size: 1.3rem;
+  color: #333;
+  margin-bottom: 1rem;
+}
+
+.variant {
+  display: flex;
+  /* flex-wrap: wrap; */
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.variant input,
+.variant select {
+  flex: 1;
+}
+
+.remove-variant-btn {
+  background-color: #e5476a;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 1rem;
+}
+
+.remove-variant-btn:hover {
+  background-color: #c7375a;
+}
+
+.add-variant-btn {
+  background-color: #0f9e99;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  padding: 10px 15px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.2s;
+}
+
+.add-variant-btn:hover {
+  background-color: #0c7f7b;
+}
+
+/* Submission and Cancel Buttons */
+.form-actions {
+  display: flex;
+  justify-content: flex-end; /* Aligns buttons to the right */
+  gap: 15px;
+  margin-top: 1rem;
+}
+
+.submit-btn, .cancel-btn {
+  padding: 12px 24px;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.submit-btn {
+  background-color: #0f9e99;
+  color: white;
+}
+
+.submit-btn:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+.submit-btn:hover:enabled {
+  background-color: #0c7f7b;
+}
+
+.cancel-btn {
+  background-color: #f0f0f0;
+  color: #555;
+  border: 1px solid #ddd;
+}
+
+.cancel-btn:hover {
+  background-color: #e0e0e0;
+}
+
+/* Loading Overlay */
+.loading-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.8);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+  text-align: center;
+}
+
+.loading-spinner {
+  border: 4px solid #f3f3f3;
+  border-top: 4px solid #0f9e99;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  animation: spin 1s linear infinite;
+  margin-bottom: 1rem;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+/* Action buttons container */
+.form-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 15px;
+  margin-top: 1rem;
+}
+
+/* Base button styles */
+.submit-btn, .cancel-btn {
+  padding: 12px 24px;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+/* Submit button (primary action) */
+.submit-btn {
+  background-color: #0f9e99;
+  color: white;
+}
+
+.submit-btn:hover:enabled {
+  background-color: #0c7f7b;
+}
+
+/* Cancel button (secondary action) */
+.cancel-btn {
+  background-color: #f0f0f0;
+  color: #555;
+  border: 1px solid #ddd;
+}
+
+.cancel-btn:hover {
+  background-color: #e0e0e0;
+}

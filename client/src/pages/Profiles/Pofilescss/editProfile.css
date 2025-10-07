@@ -1,0 +1,78 @@
+html {
+  scroll-behavior: smooth;
+}
+.edit-profile-container {
+  max-width: 600px;
+  margin: 2rem auto;
+  background: var(--color-soft-ivory, #A2D5C6);
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.edit-profile-container h2 {
+  text-align: center;
+  color: var(--color-teal-dark, #0c7f7b);
+  margin-bottom: 1.5rem;
+}
+
+.edit-profile-form .form-group {
+  margin-bottom: 1rem;
+  display: flex;
+  flex-direction: column;
+}
+
+#alt-numb{
+  font-weight: 500;
+  margin-top: 10px;
+  color: var(--color-teal-dark, #0c7f7b);
+}
+
+.edit-profile-form label {
+  color: var(--color-teal-dark, #0c7f7b);
+  margin-bottom: 0.5rem;
+}
+#typing{
+  font-weight: 1000;
+  color: var(--color-teal-dark, #0c7f7b);
+  margin-bottom: 0.5rem;
+  padding-left: 70px;
+  padding-top: 10px;
+  font-size: larger;
+}
+.edit-profile-form input,
+.edit-profile-form select {
+  padding: 0.6rem;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  outline: none;
+}
+
+.edit-profile-form input:focus,
+.edit-profile-form select:focus {
+  border-color: var(--color-tropical-teal, #119b96);
+}
+
+.address-section {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.save-btn {
+  width: 100%;
+  padding: 0.8rem;
+  border: none;
+  background: var(--color-tropical-teal, #119b96);
+  color: #fff;
+  font-size: 1rem;
+  font-weight: bold;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.save-btn:hover {
+  background: var(--color-teal-dark, #0c7f7b);
+}

@@ -1,0 +1,179 @@
+/* General Container and Typography */
+.careers-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+    font-family: 'Inter', sans-serif;
+    color: #333;
+    line-height: 1.6;
+}
+
+.careers-header {
+    text-align: center;
+    padding: 2rem 1rem;
+    background-color: #f0f8ff; /* Light blue background for emphasis */
+    border-radius: 12px;
+}
+
+.careers-header h1 {
+    font-size: 3rem;
+    color: #007bff;
+    margin-bottom: 0.5rem;
+}
+
+.careers-header p {
+    font-size: 1.2rem;
+    color: #555;
+    max-width: 800px;
+    margin: 0.5rem auto 1rem;
+}
+
+.header-lottie {
+    display: flex;
+    justify-content: center;
+    margin-top: 1rem;
+}
+
+/* Sections */
+.careers-section {
+    margin-bottom: 4rem;
+    padding: 1rem;
+}
+
+.careers-section h2 {
+    font-size: 2rem;
+    color: #2c3e50;
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+.section-description {
+    text-align: center;
+    margin-bottom: 2rem;
+    color: #666;
+}
+
+/* Role Cards Grid */
+.role-card-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 25px;
+    margin-bottom: 2rem;
+}
+
+.role-card {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    transition: transform 0.2s;
+    border-top: 5px solid #007bff; /* Blue accent border */
+}
+
+.role-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+}
+
+.role-card h3 {
+    color: #007bff;
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+.role-card p {
+    font-size: 1rem;
+    color: #555;
+}
+
+/* Gig Partner Cards Specific Styles */
+.section-gig .role-card-grid {
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+}
+
+.partner-card {
+    border-top-color: #28a745; /* Green accent border for partners */
+}
+
+.partner-card h3 {
+    color: #28a745; /* Green color for partner titles */
+}
+
+.partner-card h4 {
+    font-size: 1.1rem;
+    color: #333;
+    margin-bottom: 15px;
+    font-weight: 500;
+}
+
+.partner-card ul {
+    list-style: disc;
+    text-align: left;
+    margin-left: 20px;
+    margin-bottom: 20px;
+    padding: 0;
+}
+
+.gig-apply-link {
+    display: inline-block;
+    background-color: #28a745;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: background-color 0.3s;
+}
+
+.gig-apply-link:hover {
+    background-color: #1e7e34;
+}
+
+/* Apply Link (Corporate) */
+.apply-link {
+    display: block;
+    width: fit-content;
+    margin: 0 auto;
+    background-color: #007bff;
+    color: white;
+    padding: 12px 30px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1.1rem;
+    transition: background-color 0.3s ease;
+}
+
+.apply-link:hover {
+    background-color: #0056b3;
+}
+
+.divider {
+    border: 0;
+    height: 1px;
+    background: #ccc;
+    margin: 4rem 0;
+}
+
+/* Footer */
+.careers-footer {
+    text-align: center;
+    padding-top: 2rem;
+    border-top: 1px solid #eee;
+}
+
+.careers-footer a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+    .careers-header h1 {
+        font-size: 2.5rem;
+    }
+    .role-card-grid, .section-gig .role-card-grid {
+        grid-template-columns: 1fr;
+    }
+}
+

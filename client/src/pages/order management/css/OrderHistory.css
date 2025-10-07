@@ -1,0 +1,765 @@
+/* General Layout & Typography */
+.order-history-page {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  padding: 20px;
+  background-color: #f0f2f5; /* Light grey background */
+  min-height: 100vh;
+  color: #333;
+}
+.dealer-total-user{
+  font-size: large;
+}
+.dealer-total-user-price{
+  font-size: larger;
+  font-weight: 500;
+}
+.or-page-title {
+  text-align: center;
+  color: #2c3e50; /* Darker blue for titles */
+  margin-bottom: 30px;
+  font-size: xx-large;
+  font-weight: 700;
+}
+
+.orders-list {
+  max-width: 900px; /* Slightly wider for better content display */
+  margin: auto;
+}
+
+/* States */
+.loading-state, .error-state, .empty-state {
+  text-align: center;
+  padding: 60px;
+  font-size: 1.2em;
+  color: #666;
+  background-color: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+  margin-top: 40px;
+}
+.empty-state p {
+    font-style: italic;
+    color: #555;
+}
+
+/* Order Card Styling */
+.order-card {
+  background: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+  margin-bottom: 25px;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  overflow: hidden;
+}
+
+.order-card:hover {
+  transform: translateY(-7px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+}
+
+.card-collapsed-content {
+  padding: 25px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.header-details {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap; /* Allow wrapping on smaller screens */
+  gap: 10px;
+}
+
+.od-shipping-to {
+  font-size: 1.2em;
+  color: #555;
+  font-weight: 600;
+}
+
+.his-order-id {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.95em;
+  color: #777;
+  background-color: #f8f8f8;
+  padding: 8px 12px;
+  border-radius: 6px;
+  border: 1px solid #eee;
+}
+
+.his-order-id button {
+  background: none;
+  border: none;
+  color: #777;
+  cursor: pointer;
+  padding: 0;
+  transition: color 0.2s;
+}
+.his-order-id button:hover {
+  color: #007bff; /* A subtle blue on hover for copy */
+}
+.his-order-id button svg {
+    width: 18px;
+    height: 18px;
+}
+
+
+.his-order-summary-collapsed {
+  display: flex;
+  align-items: center;
+  gap: 25px;
+  flex-wrap: wrap;
+}
+
+.his-product-images-preview {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.his-product-images-preview img {
+  width: 80px; /* Slightly larger images */
+  height: 80px;
+  object-fit: cover;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+
+.his-summary-text {
+  display: flex;
+  flex-direction: column; /* stack vertically */
+  text-align: right;      /* align text to right inside each line */
+  width: fit-content;     /* container width matches content */
+  margin-left: auto;      /* push the container to the right */
+}
+.his-summary-text span:last-child {
+  align-self: flex-start;     /* move only the last line to the right inside the block */
+}
+
+.overall-status {
+  font-weight: 700;
+  color: #28a745; /* Green for status */
+  font-size: 1.1em;
+  
+}
+
+.grand-total-collapsed {
+  font-weight: 700;
+  color: #333;
+  font-size: 1.3em;
+  white-space: nowrap; /* Prevent total from wrapping */
+}
+
+
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.shipping-address-details {
+  background-color: #f9f9f9;
+  padding: 20px;
+  border-radius: 10px;
+  border: 1px solid #e9e9e9;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.shipping-address-details h4 {
+  margin-top: 0;
+  color: #444;
+  font-size: 1.15em;
+  margin-bottom: 10px;
+}
+.shipping-address-details p {
+    margin-bottom: 5px;
+    color: #666;
+    font-size: 0.95em;
+}
+.shipping-address-details p:last-child {
+    font-weight: 600;
+    color: #333;
+}
+
+/* Dealer Group */
+.dealer-group {
+  border: 1px solid #e0e0e0;
+  border-radius: 10px;
+  padding: 20px;
+  background-color: #fdfdfd;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.04);
+}
+
+.dealer-header h3 {
+  margin: 0 0 15px 0;
+  color: #2c3e50;
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 1.30em;
+  font-weight: 700;
+  border-bottom: 3px solid #eee;
+  padding-bottom: 10px;
+}
+
+/* Status Bar like Flipkart - ENHANCED */
+.status-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start; /* Align items at the top to give space for labels */
+  margin-top: 15px;
+  position: relative;
+  padding-top: 10px; /* Space for the line */
+  padding-bottom: 25px; /* Space for labels below circles */
+}
+
+.status-bar .status-item {
+  flex: 1;
+  text-align: center;
+  position: relative;
+  z-index: 2; /* Ensures circles are above the line */
+  transition: all 0.4s ease;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0 5px; /* Add some padding to prevent text overlap */
+}
+
+.status-bar .status-circle {
+  width: 18px; /* Slightly larger circles */
+  height: 18px;
+  background-color: #e0e0e0; /* Default grey */
+  border-radius: 50%;
+  margin: 0 auto 8px; /* Space between circle and label */
+  border: 2px solid #e0e0e0;
+  transition: all 0.4s ease;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+/* Active circle style */
+.status-bar .status-item.active .status-circle {
+  background-color: #28a745; /* Green fill */
+  border-color: #28a745; /* Green border */
+  box-shadow: 0 0 0 3px rgba(40, 167, 69, 0.3); /* Soft glow */
+}
+
+/* Checkmark for active circles */
+.status-bar .status-item.active .status-circle::after {
+    /* content: '✔'; Unicode checkmark */
+    color: white;
+    font-size: 12px;
+    line-height: 1;
+}
+.status-bar-cancelled .status-item.active .status-circle {
+  background-color: red; 
+  border-color: red; 
+  box-shadow: 0 0 0 3px rgba(167, 40, 40, 0.3); /* Soft glow */
+}
+.status-bar-cancelled .status-item.active .status-circle::after{
+    content: '✗'; 
+    color: white;
+    font-size: 12px;
+    line-height: 1;
+}
+
+.status-bar .status-label {
+  font-size: 0.8em;
+  color: #888;
+  white-space: normal; /* Allow text to wrap */
+  line-height: 1.2;
+}
+
+.status-bar .status-item.active .status-label {
+  color: #28a745;
+  font-weight: 600;
+}
+
+/* The progress line */
+.status-bar::before {
+  content: '';
+  position: absolute;
+  top: 18px; /* Align with center of circles */
+  left: 0;
+  right: 0;
+  height: 2px;
+  background-color: #e0e0e0; /* Grey background for the full line */
+  z-index: 1;
+}
+
+.status-bar::after {
+  content: '';
+  position: absolute;
+  top: 18px; /* Align with center of circles */
+  left: 0;
+  height: 2px;
+  background-color: #28a745; /* Green for progress */
+  transition: width 0.6s cubic-bezier(0.2, 0.8, 0.4, 1.2);
+  width: var(--progress-width, 0%); /* Dynamic width from JS */
+  z-index: 1;
+}
+.tick{
+  color: white;
+}
+.status-bar-cancelled .status-item:first-child .status-circle {
+  background-color: red;
+  border-color: red;
+}
+
+.status-bar-cancelled .status-item:last-child .status-circle {
+  background-color: red;
+  border-color: red;
+  box-shadow: 0 0 0 3px rgba(167, 40, 40, 0.3);
+}
+
+.status-bar-cancelled .status-item:first-child .status-label,
+.status-bar-cancelled .status-item:last-child .status-label {
+  color: red;
+  font-weight: 600;
+}
+
+.status-bar-cancelled::after {
+  background-color: red; /* Red line */
+  width: 100%; /* Full width to show up to Cancelled */
+}
+
+/* Delivery Pin and Products List */
+.delivery-pin-section {
+  text-align: center;
+  margin-top: 20px;
+  padding: 15px;
+  background-color: #fff3cd; /* Light yellow background */
+  border: 1px dashed #ffeeba;
+  border-radius: 8px;
+  color: #856404; /* Darker yellow text */
+  font-weight: 600;
+  font-size: 1.1em;
+}
+
+.products-list {
+  list-style: none;
+  padding: 0;
+  margin-top: 20px;
+}
+
+.products-list li {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  padding: 15px 0;
+  border-bottom: 1px solid #eee;
+}
+
+.products-list li:last-child {
+  border-bottom: none;
+}
+
+.products-list img {
+  width: 120px; /* Larger product images */
+  height: 120px;
+  object-fit: cover;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+
+.his-product-details {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  /* gap: 5px; */
+}
+
+.product-name {
+  font-weight: 700;
+  flex-wrap: wrap;
+  color: #333;
+  font-size: 1.1em;
+}
+
+.product-variant {
+  color:teal;
+  font-weight: 700;
+  font-size: large;
+}
+
+.his-product-price {
+  color:#996515; /* Dark blue for pricing */
+  font-weight: 600;
+  font-size:larger;
+}
+
+/* Price Summary */
+.his-price-summary {
+  margin-top: 30px;
+  padding-top: 20px;
+  border-top: 1px solid #f0f2f5;
+  background-color: #f9f9f9;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.his-price-summary h4 {
+  margin-top: 0;
+  color: #2c3e50;
+  font-size: 1.2em;
+  margin-bottom: 15px;
+}
+
+.his-price-summary p {
+  display: flex;
+  justify-content: space-between;
+  margin: 10px 0;
+  font-size: 1em;
+}
+
+.his-price-summary p span:first-child {
+  color: #555;
+}
+
+.his-price-summary p span:last-child {
+  font-weight: 600;
+  color: #333;
+}
+
+
+.his-price-summary hr {
+  border: none;
+  border-top: 1px dashed #eee;
+  margin: 15px 0;
+}
+
+.his-grand-total-summary {
+  font-size: 1.4em;
+  font-weight: 700;
+  color: #2c3e50;
+  padding-top: 10px;
+}
+
+.order-timestamps {
+  margin-top: 25px;
+  padding-top: 20px;
+  border-top: 1px solid #f0f2f5;
+  color: #666;
+  font-size: 0.9em;
+  line-height: 1.6;
+}
+.order-timestamps strong {
+    color: #444;
+}
+.dealer-wise-amount{
+  background-color:khaki;
+  padding:10px;
+  border-radius: 14px;
+}
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+  .order-history-page {
+    padding: 15px;
+  }
+  .page-title {
+    font-size: 1.8em;
+  }
+  .card-collapsed-content {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .header-details {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+  }
+  .his-order-summary-collapsed {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 15px;
+  }
+  .his-summary-text {
+    align-items: flex-start;
+   text-align: left !important;
+  }
+  .his-product-images-preview img {
+    width: 50px;
+    height: 50px;
+  }
+  .dealer-group {
+    padding: 15px;
+  }
+
+  .status-bar .status-item {
+    padding: 0 2px;
+  }
+  .status-bar .status-label {
+    font-size: 0.7em;
+  }
+  .products-list img {
+    width: 60px;
+    height: 60px;
+  }
+  .his-price-summary {
+    padding: 15px;
+  }
+  .his-grand-total-summary {
+    font-size: 1.2em;
+  }
+}
+
+@media(max-width:470px){
+   .cancel-btn-dropdown {
+    margin-top: 10px;
+  }
+}
+/* In OrderHistory.css */
+
+.pin-input-section {
+  text-align: center;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center ;
+  align-items: center;
+  background-color: #fff3cd; /* Light yellow background */
+  border: 1px dashed #ffeeba;
+  border-radius: 8px;
+  color: #856404; /* Darker yellow text */
+  font-weight: 600;
+  font-size: 1.1em;
+  padding: 1rem;
+}
+
+.pin-input-section input {
+  flex-grow: 0.1;
+  padding: 6px;
+  border: 3px solid #ccc;
+  border-radius: 6px;
+  text-align: center;
+}
+.dealer-pin-text{
+  padding-top: 2px;
+  font-size: larger;
+  
+}
+.confirm-delivery-btn {
+  padding: 8px 16px;
+  background-color: #28a745;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: background-color 0.2s ease;
+}
+
+.confirm-delivery-btn:hover:not(:disabled) {
+  background-color: #218838;
+}
+
+.confirm-delivery-btn:disabled {
+  background-color: #6c757d;
+  cursor: not-allowed;
+}
+/* ======================== */
+/* Cancellation Popup */
+/* ======================== */
+
+.popup-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 100;
+}
+
+.cancellation-popup {
+    background-color: white;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    width: 90%;
+    max-width: 450px;
+    text-align: center;
+    font-family: 'Inter', sans-serif;
+}
+
+.cancellation-popup h3 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+}
+
+.cancellation-popup textarea {
+    width: 100%;
+    min-height: 120px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    resize: vertical;
+    font-size: 14px;
+    margin-bottom: 1rem;
+    box-sizing: border-box;
+}
+
+.cancellation-actions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+    margin-top: 1rem;
+}
+
+.cancellation-actions button {
+    padding: 10px 20px;
+    border-radius: 6px;
+    border: none;
+    cursor: pointer;
+    font-weight: 600;
+    transition: all 0.2s ease-in-out;
+}
+
+.cancel-btn {
+    background-color: #e2e8f0;
+    color: #4a5568;
+}
+
+.cancel-btn:hover {
+    background-color: #cbd5e1;
+}
+
+.confirm-btn {
+    background-color: #ef4444;
+    color: white;
+}
+
+.confirm-btn:hover:not(:disabled) {
+    background-color: #dc2626;
+}
+
+.confirm-btn:disabled {
+    background-color: #d1d5db;
+    cursor: not-allowed;
+}
+/* Cancel button beside dropdown */
+.cancel-btn-dropdown {
+    background-color: #e2e8f0;
+    color: #4a5568;
+    padding: 8px 14px;
+    margin-left: 10px;
+    border-radius: 6px;
+    border: none;
+    cursor: pointer;
+    font-weight: 600;
+    transition: all 0.2s ease-in-out;
+}
+
+.cancel-btn-dropdown:hover {
+    background-color: #cbd5e1;
+}
+
+/* Custom dropdown styling */
+.status-dropdown {
+    padding: 8px 14px;
+    border-radius: 6px;
+    border: 1px solid #cbd5e1;
+    background-color: #f9fafb;
+    color: #4a5568;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+    appearance: none; /* Remove default arrow for modern style */
+    background-image: url("data:image/svg+xml;charset=US-ASCII,%3Csvg%20width%3D%2210%22%20height%3D%227%22%20viewBox%3D%220%200%2010%207%22%20xmlns%3D%22http://www.w3.org/2000/svg%22%3E%3Cpath%20d%3D%22M0%200l5%207%205-7H0z%22%20fill%3D%22%234a5568%22/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 10px center;
+    background-size: 10px 7px;
+}
+
+.status-dropdown:hover {
+    border-color: #a0aec0;
+    background-color: #f1f5f9;
+}
+
+.status-dropdown:focus {
+    outline: none;
+    border-color: #119b96;
+    box-shadow: 0 0 0 2px rgba(17, 155, 150, 0.2);
+}
+
+/* Optional: Add a subtle dropdown arrow for older browsers */
+.status-dropdown option {
+    padding: 5px 10px;
+}
+.cancellation-reason {
+  margin-top: 0.5rem;
+  padding: 0.5rem 0.75rem;
+  border-left: 4px solid #dc2626;
+  background-color: #fee2e2; /* light red background */
+  border-radius: 6px;
+  font-size: 13px;
+  color: #dc2626;
+}
+/* default dealer status */
+.dealer-status {
+  font-size: x-large;
+  font-weight: 500;
+  margin: 0.5rem 0;
+  color: #333;
+}
+.dealer-status-con{
+  display: inline-block;
+  background-color: greenyellow;
+  border-radius: 12px;
+  color:black;
+  padding: 5px;
+}
+/* red text for cancelled orders */
+.cancelled-color {
+  color: #dc2626; /* Tailwind's red-600 */
+  font-weight: 600;
+}
+
+/* Product Images Preview in collapsed card */
+.his-product-images-preview {
+  display: flex;
+  gap: 5px;
+  overflow-x: auto;
+  max-width: 320px;
+}
+
+.his-product-images-preview img {
+  width: 60px;
+  height: 60px;
+  object-fit: cover;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+}
+
+
+/* Scrollbar styling for preview images */
+.his-product-images-preview::-webkit-scrollbar {
+  height: 5px;
+}
+
+.his-product-images-preview::-webkit-scrollbar-thumb {
+  background-color: rgba(0,0,0,0.2);
+  border-radius: 2px;
+}
+.free-delivery-charge{
+  color: greenyellow !important;
+}
+.note-marker{
+  padding-top: 20px;
+  font-size:medium;
+}
+mark{
+  border-radius: 2px;
+   color: red;
+  padding: 1px;
+}

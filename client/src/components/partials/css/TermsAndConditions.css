@@ -1,0 +1,131 @@
+/* General Container and Typography */
+.terms-container {
+    max-width: 1300px;
+    margin: 0 auto;
+    padding: 2rem;
+    font-family: 'Inter', sans-serif;
+    line-height: 1.7;
+    color: #444;
+}
+
+.terms-header {
+    text-align: center;
+    margin-bottom: 3rem;
+    padding-bottom: 1rem;
+    border-bottom: 2px solid #3498db;
+}
+
+.terms-header h1 {
+    font-size: 2.8rem;
+    color: #2c3e50;
+    margin-bottom: 0.2rem;
+}
+
+.terms-header p {
+    font-size: 1rem;
+    color: #7f8c8d;
+}
+
+/* Main Content Layout (Sidebar + Body) */
+.terms-content {
+    display: flex;
+    gap: 40px;
+}
+
+/* Sidebar (Table of Contents) */
+.terms-sidebar {
+    flex: 0 0 250px; /* Fixed width for desktop */
+    padding-top: 20px;
+    position: sticky; /* Make the table of contents stick while scrolling */
+    top: 20px; /* Distance from the top of the viewport */
+    height: fit-content;
+    background-color: #f8f9fa;
+    border-radius: 8px;
+    border: 1px solid #e9ecef;
+    padding: 20px;
+}
+
+.terms-sidebar h2 {
+    font-size: 1.3rem;
+    color: #3498db;
+    margin-bottom: 1rem;
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 10px;
+}
+
+.terms-sidebar ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.terms-sidebar li {
+    margin-bottom: 0.7rem;
+}
+
+.terms-sidebar a {
+    text-decoration: none;
+    color: #555;
+    font-size: 0.95rem;
+    transition: color 0.2s;
+    display: block;
+}
+
+.terms-sidebar a:hover {
+    color: #2c3e50;
+    font-weight: 600;
+}
+
+.terms-sidebar .contact-note {
+    margin-top: 20px;
+    padding-top: 15px;
+    border-top: 1px solid #eee;
+    font-size: 0.9rem;
+}
+
+/* Terms Body */
+.terms-body {
+    flex-grow: 1;
+    max-width: 900px;
+}
+
+.terms-body h2 {
+    font-size: 1.8rem;
+    color: #2c3e50;
+    margin-top: 2.5rem;
+    margin-bottom: 1rem;
+    padding-top: 10px; /* Padding for sticky header offset */
+}
+
+.terms-body p {
+    margin-bottom: 1.5rem;
+}
+
+.terms-body ul {
+    padding-left: 20px;
+    margin-bottom: 1.5rem;
+}
+
+.terms-body li {
+    margin-bottom: 0.5rem;
+}
+
+/* Responsive adjustments */
+@media (max-width: 1000px) {
+    .terms-content {
+        flex-direction: column;
+    }
+    .terms-sidebar {
+        position: static; /* Disable sticky sidebar on smaller screens */
+        flex: auto;
+        width: 100%;
+        margin-bottom: 2rem;
+    }
+}
+
+@media (max-width: 600px) {
+    .terms-header h1 {
+        font-size: 2rem;
+    }
+}
+

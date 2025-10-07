@@ -1,0 +1,130 @@
+/* Product Handler Styles */
+.product-handler {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.handler-title {
+  text-align: center;
+  font-size: 1.8rem;
+  color: #333;
+  margin: 0;
+}
+
+/* Loading and Error States */
+.loading-state,
+.error-state,
+.no-products-message {
+  text-align: center;
+  font-size: 1.1rem;
+  color: #777;
+  margin-top: 2rem;
+}
+
+/* Product Card Grid */
+.product-card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+.product-card {
+  background: #fff;
+  border: 1px solid #e5e5e5;
+  border-radius: 12px;
+  padding: 15px;
+  text-align: left;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+  transition: transform 0.2s ease;
+  display: flex;
+  flex-direction: column;
+}
+
+.product-card:hover {
+  transform: translateY(-5px);
+}
+
+.product-card-image {
+  width: 100%;
+  height: 150px;
+  object-fit: contain;
+  border-radius: 8px;
+  margin-bottom: 10px;
+}
+
+.card-details {
+  flex-grow: 1;
+}
+
+.product-card-name {
+  font-size: 1.1rem;
+  color: #333;
+  margin: 0 0 5px;
+}
+
+.product-card-category {
+  font-size: 0.9rem;
+  color: #777;
+  margin: 0 0 10px;
+}
+
+.product-card-price {
+  font-size: 1rem;
+  font-weight: bold;
+  color: #0f9e99;
+  margin: 0;
+}
+
+/* Card Actions */
+.card-actions {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  margin-top: 15px;
+}
+
+.card-actions button {
+  flex: 1;
+  padding: 10px;
+  border: none;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.edit-btn {
+  background-color: #0f9e99;
+  color: white;
+}
+
+.edit-btn:hover {
+  background-color: #0c7f7b;
+}
+
+.delete-btn {
+  background-color: #e5476a;
+  color: white;
+}
+
+.delete-btn:hover {
+  background-color: #c7375a;
+}
+
+/* Edit Form Container */
+.edit-form-container {
+  margin-top: 2rem;
+  padding-top: 2rem;
+  border-top: 2px dashed #ddd;
+}
+.product-card-grid img {
+  width: 100%;
+  height: 150px;
+  object-fit: contain;
+  border-radius: 8px;
+  margin-bottom: 10px;
+}
+.no-products-message{
+  height: 100vmax;
+}

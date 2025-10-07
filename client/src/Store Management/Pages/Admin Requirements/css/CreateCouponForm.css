@@ -1,0 +1,299 @@
+/* Container for the entire manager page */
+.coupon-manager-container {
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 20px;
+    font-family: 'Inter', sans-serif;
+}
+
+/* Main page title */
+.main-title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #333;
+    margin-bottom: 30px;
+}
+
+/* List view styling */
+.list-view {
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+}
+
+.list-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 2px solid #ddd;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+}
+
+
+
+.list-title {
+    font-size: 1.8rem;
+    font-weight: 600;
+    color: #555;
+    margin-left: auto;
+  margin-right: auto;
+}
+
+.add-coupon-button {
+    padding: 12px 20px;
+    font-size: 1rem;
+    font-weight: 600;
+    color: #fff;
+    background-color: #28a745;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.add-coupon-button:hover {
+    background-color: #218838;
+}
+
+.empty-list-message,
+.error-message {
+    text-align: center;
+    font-size: 1.1rem;
+    color: #666;
+    padding: 40px 0;
+}
+
+.error-message {
+    color: #dc3545;
+}
+
+/* Form view styling */
+.form-view {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+/* Coupon list item styling */
+.coupon-list {
+    list-style: none;
+    padding: 0;
+}
+
+.coupon-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #fff;
+    padding: 15px 20px;
+    border-radius: 8px;
+    border: 1px solid #eee;
+    margin-bottom: 15px;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.coupon-item:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+}
+
+.coupon-details {
+    flex-grow: 1;
+}
+
+.coupon-code-and-status {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    margin-bottom: 5px;
+}
+
+.coupon-code {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #007bff;
+    text-transform: uppercase;
+}
+
+.coupon-status {
+    font-size: 0.8rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    padding: 4px 8px;
+    border-radius: 15px;
+    margin-left: 10px;
+}
+
+.coupon-status.active {
+    background-color: #d4edda;
+    color: #155724;
+}
+
+.coupon-status.expired {
+    background-color: #f8d7da;
+    color: #721c24;
+}
+
+.coupon-description {
+    font-size: 0.9rem;
+    color: #666;
+    margin-bottom: 5px;
+}
+
+.coupon-info {
+    font-size: 0.85rem;
+    color: #888;
+}
+
+/* Action buttons styling */
+.coupon-actions {
+    display: flex;
+    gap: 10px;
+}
+
+.edit-button,
+.delete-button {
+    padding: 8px 16px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.2s ease, color 0.2s ease;
+    border: none;
+}
+
+.edit-button {
+    background-color: #ffc107;
+    color: #fff;
+}
+
+.edit-button:hover {
+    background-color: #e0a800;
+}
+
+.delete-button {
+    background-color: #dc3545;
+    color: #fff;
+}
+
+.delete-button:hover {
+    background-color: #c82333;
+}
+/* button-group for form */
+.button-group {
+    display: flex;
+    gap: 10px;
+}
+
+/* Base style for all buttons within the group */
+.coup-submit-button,
+.cancel-button {
+    padding: 12px 20px;
+    font-size: 1rem;
+    font-weight: 700;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    flex: 1; /* This makes both buttons take up equal space */
+}
+
+/* Style for the "Create" or "Update" button */
+.coup-submit-button {
+    background-color: #007bff;
+    color: #fff;
+}
+
+.submit-button:hover {
+    background-color: #0056b3;
+}
+
+/* Style for the "Cancel" button */
+.cancel-button {
+    background-color: #6c757d;
+    color: #fff;
+}
+
+.cancel-button:hover {
+    background-color: #5a6268;
+}
+input[name="code"]{
+    text-transform: uppercase;
+}
+input[name="partnerName"] {
+    text-transform: uppercase;
+}
+/* Add to CreateCouponForm.css */
+@media (max-width: 600px) {
+    .coupon-form-container {
+        padding: 15px;
+        margin: 20px;
+    }
+
+    .form-title {
+        font-size: 1.8rem;
+    }
+
+    .form-group input,
+    .form-group textarea,
+    .form-group select,
+    .submit-button,
+    .cancel-button {
+        font-size: 0.9rem;
+        padding: 10px;
+    }
+}
+
+
+/* Add to CouponManager.css */
+@media (max-width: 900px) {
+    .content-wrapper {
+        flex-direction: column;
+        gap: 20px;
+    }
+    .list-view {
+    padding: 10px;
+    background-color: #f9f9f9;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+   }
+
+
+}
+@media (max-width: 600px) {
+    .list-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+    }
+
+    .list-title {
+        font-size: 1.5rem;
+        text-align: center !important;
+    }
+
+    .add-coupon-button {
+        width: 100%;
+        text-align: center;
+    }
+
+    .coupon-item {
+        flex-direction: column;
+        align-items: flex-start;
+        flex-wrap: wrap;
+    }
+
+    .coupon-actions {
+        margin-top: 15px;
+        width: 100%;
+        /* flex-wrap: wrap; */
+        justify-content: space-between;
+    }
+
+    .edit-button,
+    .delete-button {
+        flex-grow: 1;
+        text-align: center;
+    }
+}

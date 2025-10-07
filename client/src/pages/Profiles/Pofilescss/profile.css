@@ -1,0 +1,414 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;700&display=swap');
+
+:root {
+  --bg-color: #F0FAF9;
+  --btn-color: #0F9E99;
+  --text-color: #002221;
+  --card-bg-light: rgba(15, 158, 153, 0.1);
+  --card-bg-dark: rgba(15, 158, 153, 0.2);
+  --glow-color: #0F9E99;
+}
+
+body {
+  margin: 0;
+  font-family: 'Roboto Mono', monospace;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  line-height: 1.6;
+}
+.notification-btn{
+  text-align: center;
+}
+/* Profile Container */
+.profile-container {
+  max-width: 900px;
+  margin: 2rem auto;
+  padding: 2rem;
+  background: var(--card-bg-light);
+  border-radius: 15px;
+  box-shadow: 0 0 25px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(10px);
+  border: 1px solid var(--glow-color);
+  animation: fadeIn 1s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.profile-header {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.profile-image {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  display: inline;
+  border: 3px solid var(--glow-color);
+  box-shadow: 0 0 15px var(--glow-color);
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.profile-image:hover {
+  transform: scale(1.05) rotate(5deg);
+}
+
+.profile-name {
+  font-size: 2.5rem;
+  margin-top: 1rem;
+  color: var(--text-color);
+}
+
+.profile-role {
+  font-weight: bold;
+  color: var(--btn-color);
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.profile-details-grid, .profile-addresses {
+  margin-top: 2rem;
+}
+
+.profile-details-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+}
+h3{
+  text-align: center;
+}
+.detail-card, .dashboard-card {
+  background: var(--card-bg-dark);
+  padding: 1.5rem;
+  margin-bottom: 20px;
+  border-radius: 10px;
+  border: 1px solid rgba(15, 158, 153, 0.3);
+  box-shadow: 0 0 10px rgba(15, 158, 153, 0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.type-addre{
+  border-radius: 5px;
+  background-color: var(--btn-color);
+  color: var(--bg-color);
+  font-size: 1rem;
+  font-family: 'Roboto Mono', monospace;
+  text-transform: uppercase;
+  cursor: pointer;
+  margin-left: 50px;
+  margin-bottom: 8px;
+}
+.address-card{
+    background: var(--card-bg-dark);
+    display:inline-block;
+  padding: 1.5rem;
+  margin: 10px;
+  border-radius: 10px;
+  border: 1px solid rgba(15, 158, 153, 0.3);
+  box-shadow: 0 0 10px rgba(15, 158, 153, 0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.detail-card:hover, .address-card:hover, .dashboard-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 5px 20px rgba(15, 158, 153, 0.3);
+}
+
+h3, h4 {
+  border-bottom: 2px solid var(--glow-color);
+  padding-bottom: 0.5rem;
+  margin-top: 0;
+  text-transform: uppercase;
+}
+
+.feature-btn, .admin-btn, .add-address-btn-prof, .forgot-password-btn, .edit-profile-btn, .dashboard-btn {
+  display: block;
+  width: 100%;
+  padding: 1rem;
+  margin-top: 1rem;
+  border: none;
+  border-radius: 5px;
+  background-color: var(--btn-color);
+  color: var(--bg-color);
+  font-size: 1rem;
+  font-family: 'Roboto Mono', monospace;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+.add-address-btn-prof{
+  text-align: center;
+}
+.feature-btn:hover, .admin-btn:hover, .add-address-btn:hover, .forgot-password-btn:hover, .edit-profile-btn:hover, .dashboard-btn:hover {
+  background-color: #0c827b;
+  transform: translateY(-3px);
+  box-shadow: 0 5px 15px rgba(15, 158, 153, 0.4);
+}
+
+.feature-btn:active, .admin-btn:active, .add-address-btn:active, .forgot-password-btn:active, .edit-profile-btn:active, .dashboard-btn:active {
+  transform: translateY(0);
+}
+
+.role-specific-features, .admin-features {
+  margin-top: 2rem;
+  padding: 1.5rem;
+  border: 2px solid var(--btn-color);
+  border-radius: 10px;
+  margin-bottom: 2rem;
+  box-shadow: 0 0 20px var(--glow-color);
+  text-align: center;
+}
+.admin-features{
+  margin-bottom: 2rem;
+}
+.forgot-password-section {
+  text-align: center;
+  margin-top: 2rem;
+}
+
+.dashboard-features-section {
+  margin-top: 2rem;
+  display: grid;
+  gap: 1.5rem;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+}
+
+.dropdown-menu {
+  display: flex;
+  flex-direction: column;
+  background: var(--card-bg-dark);
+  border-radius: 8px;
+  margin-top: 0.5rem;
+  overflow: hidden;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.dropdown-item {
+  background: none;
+  border: none;
+  text-align: center;
+  padding: 0.8rem 1.5rem;
+  cursor: pointer;
+  color: var(--text-color);
+  font-family: 'Roboto Mono', monospace;
+  transition: background-color 0.2s ease;
+}
+
+.dropdown-item:hover {
+  background-color: rgba(15, 158, 153, 0.2);
+}
+
+/* Layout fix for two panels */
+.dashboard-layout {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  margin: 2rem auto;
+  padding: 1rem;
+}
+
+.dashboard-main-card {
+  display: flex;
+  flex-direction: column; /* mobile first */
+  gap: 2rem;
+  width: 100%;
+  max-width: 1200px;
+}
+
+.profile-panel, .dashboard-panel {
+  background: rgba(15, 158, 153, 0.1);
+  border-radius: 15px;
+  padding: 1.5rem;
+  box-shadow: 0 0 25px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(10px);
+  border: 1px solid var(--glow-color);
+  flex: 1;
+}
+
+.dashboard-panel {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+/* Desktop layout */
+@media (min-width: 768px) {
+  .dashboard-main-card {
+    flex-direction: row;
+    align-items: flex-start;
+    padding-bottom: 20px;
+  }
+
+  .left-panel {
+    flex: 2; /* bigger left side */
+  }
+
+  .right-panel {
+    flex: 1; /* smaller right side */
+
+  }
+}
+
+/* Mobile responsiveness */
+@media (max-width: 600px) {
+  .profile-container {
+    margin: 1rem;
+    padding: 0.5rem;
+  }
+  .profile-name {
+    font-size: 2rem;
+  }
+  .profile-details-grid {
+    grid-template-columns: 1fr;
+  }
+  .feature-btn, .admin-btn, .edit-profile-btn, .dashboard-btn {
+    padding: 0.8rem;
+    font-size: 0.9rem;
+  }
+}
+.dashboard-main-card {
+  display: flex;
+  flex-direction: column; /* Mobile first: stacked */
+  background: rgba(15, 158, 153, 0.1);
+  border-radius: 15px;
+  padding: 2rem;
+  box-shadow: 0 0 25px rgba(0, 0, 0, 0.1);
+  border: 1px solid var(--glow-color);
+  gap: 2rem;
+}
+
+.left-panel, .right-panel {
+  flex: 1;
+}
+
+/* Desktop view: side by side */
+@media (min-width: 768px) {
+  .dashboard-main-card {
+    flex-direction: row;
+    align-items: flex-start;
+  }
+}
+/* Styling for the popup overlay */
+.prof-popup-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+/* Styling for the popup content box */
+.prof-popup-content {
+  background-color: #fff;
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  width: 90%;
+  max-width: 450px;
+  position: relative;
+}
+
+/* Styling for the popup header with the close button */
+.prof-popup-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #eee;
+  padding-bottom: 10px;
+  margin-bottom: 20px;
+}
+
+/* Styling for the close button */
+.prof-close-btn {
+  background: none;
+  border: none;
+  font-size: 30px;
+  cursor: pointer;
+  color: #666;
+}
+
+.prof-close-btn:hover {
+  color: #333;
+}
+
+/* Styling for the terms container with checkbox and link */
+.prof-terms-container {
+  margin: 20px 0;
+  display: flex;
+  align-items: center;
+}
+
+.prof-terms-container input[type="checkbox"] {
+  margin-right: 10px;
+}
+
+.prof-terms-container a {
+  color: #00838f;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.prof-terms-container a:hover {
+  text-decoration: underline;
+}
+
+/* Styling for the text inside the terms popup */
+.prof-terms-text {
+  max-height: 200px;
+  overflow-y: auto;
+  line-height: 1.6;
+  color: #444;
+}
+
+.prof-terms-text strong {
+  color: #00838f;
+}
+
+/* Styling for the button action area */
+.prof-popup-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+/* Base button style (can be shared with your existing .btn) */
+.prof-btn {
+  background-color: #00838f;
+  color: white;
+  padding: 12px 24px;
+  border: none;
+  border-radius: 16px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.prof-btn:hover {
+  background-color: #006064;
+}
+
+.prof-btn.hidden {
+  display: none;
+}
+
+/* Specific styling for the cancel button */
+.prof-cancel-btn {
+  background-color: transparent;
+  color: #555;
+  border: 1px solid #ccc;
+  border-radius: 18px;
+}
+
+.prof-cancel-btn:hover {
+  background-color: #f0f0f0;
+  color: #333;
+}

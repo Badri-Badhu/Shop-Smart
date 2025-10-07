@@ -1,0 +1,218 @@
+/* Main Container */
+.pending-orders-container {
+  max-width: 1200px;
+  margin: 2rem auto;
+  padding: 1rem;
+  font-family: Arial, sans-serif;
+}
+
+.pending-orders-container h2 {
+  text-align: center;
+  margin-bottom: 2rem;
+  color: #333;
+  font-size: 2.2rem;
+  border-bottom: 3px solid #00838f;
+  padding-bottom: 0.5rem;
+}
+
+.orders-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 2rem;
+}
+
+/* Order Card Styling */
+.order-card {
+  background-color: #ffffff;
+  border: 1px solid #e9ecef;
+  border-radius: 8px;
+  padding: 1.5rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+  display: flex;
+  flex-direction: column;
+}
+
+.order-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
+}
+
+/* Order Header */
+.order-header {
+  border-bottom: 1px solid #ccc;
+  padding-bottom: 1rem;
+  margin-bottom: 1rem;
+}
+
+.order-header h3 {
+  margin: 0;
+  color: #007bff;
+  font-size: 1.2rem;
+}
+
+.user-info {
+  font-size: 0.9rem;
+  color: #6c757d;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 0.5rem;
+}
+
+.order-total {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #00838f;
+  margin-top: 0.5rem;
+  text-align: right;
+}
+
+.overall-status-badge {
+  display: inline-block;
+  padding: 0.25rem 0.75rem;
+  border-radius: 12px;
+  font-size: 0.8rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  margin-top: 10px;
+  background-color: #ffc107;
+  color: #333;
+}
+
+/* Dealer Group and Items */
+.order-details-body h4 {
+  margin-top: 1rem;
+  color: #495057;
+}
+
+.dealer-group {
+  border: 1px solid #e9ecef;
+  border-radius: 8px;
+  padding: 1rem;
+  margin-bottom: 1rem;
+}
+
+.dealer-group-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+.dealer-status {
+  padding: 0.2rem 0.6rem;
+  border-radius: 8px;
+  font-size: 0.8rem;
+  color: white;
+}
+
+.status-pending { background-color: #ffc107; color: #333; }
+.status-confirmed { background-color: #007bff; }
+.status-packed { background-color: #6f42c1; }
+.status-shipped { background-color: #17a2b8; }
+.status-out-for-delivery { background-color: #fd7e14; }
+.status-delivered { background-color: #28a745; }
+.status-cancelled { background-color: #dc3545; }
+
+/* Item List and Styling */
+.item-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.item {
+  display: flex;
+  align-items: center;
+  padding: 0.5rem 0;
+  border-bottom: 1px dashed #e9ecef;
+}
+
+.item:last-child {
+  border-bottom: none;
+}
+
+.item-image {
+  width: 50px;
+  height: 50px;
+  object-fit: cover;
+  border-radius: 4px;
+  margin-right: 1rem;
+}
+
+.item-details {
+  display: flex;
+  flex-direction: column;
+}
+
+.item-name {
+  font-weight: bold;
+  color: #333;
+}
+
+.item-quantity,
+.item-price,
+.item-variant {
+  font-size: 0.85rem;
+  color: #6c757d;
+}
+
+.delivery-pin-text, .cancellation-mess-text {
+  font-size: 0.9rem;
+  margin-top: 1rem;
+  font-weight: bold;
+  color: #dc3545;
+}
+
+.delivery-pin-text {
+  color: #28a745;
+}
+
+.no-orders-message {
+  text-align: center;
+  font-size: 1.2rem;
+  color: #6c757d;
+  margin-top: 5rem;
+}
+
+.loading-state {
+  text-align: center;
+  font-size: 1.5rem;
+  color: #007bff;
+  margin-top: 5rem;
+}
+/* Styling for the filter button container */
+.status-filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
+  margin-bottom: 2rem;
+}
+
+/* Styling for the filter buttons */
+.status-btn {
+  background-color: #f8f9fa;
+  border: 1px solid #dee2e6;
+  border-radius: 20px;
+  padding: 8px 16px;
+  font-size: 0.9rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+  text-transform: capitalize;
+}
+
+/* Hover state for buttons */
+.status-btn:hover {
+  background-color: #e9ecef;
+}
+
+/* Active state for the selected button */
+.status-btn.active {
+  background-color: #00838f;
+  color: white;
+  border-color: #006064;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}

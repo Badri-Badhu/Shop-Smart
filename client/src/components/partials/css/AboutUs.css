@@ -1,0 +1,139 @@
+/* General Container and Text */
+.about-us-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+    font-family: 'Inter', sans-serif;
+    color: #333;
+    line-height: 1.6;
+}
+
+.about-us-header {
+    text-align: center;
+    margin-bottom: 3rem;
+    padding: 1rem;
+    border-bottom: 2px solid #3498db;
+}
+
+.about-us-header h1 {
+    font-size: 2.5rem;
+    color: #2c3e50;
+    margin-bottom: 0.5rem;
+}
+
+.about-us-header p {
+    font-size: 1.2rem;
+    color: #7f8c8d;
+}
+
+/* Mission Section (Flexbox for side-by-side content) */
+.about-us-mission {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 40px;
+    margin-bottom: 4rem;
+}
+
+.mission-content {
+    flex: 1;
+}
+
+.mission-image {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+
+.about-us-mission h2 {
+    font-size: 2rem;
+    color: #3498db;
+    margin-bottom: 1rem;
+}
+
+.about-us-mission p {
+    margin-bottom: 1rem;
+}
+
+/* Call to Action Button */
+.cta-button {
+    display: inline-block;
+    background-color: #3498db;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: 600;
+    margin-top: 1.5rem;
+    transition: background-color 0.3s ease, transform 0.2s;
+}
+
+.cta-button:hover {
+    background-color: #2980b9;
+    transform: translateY(-2px);
+}
+
+/* Core Values Section */
+.about-us-values {
+    text-align: center;
+    margin-bottom: 4rem;
+}
+
+.about-us-values h2 {
+    font-size: 2rem;
+    color: #2c3e50;
+    margin-bottom: 2rem;
+}
+
+.values-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+.value-card {
+    background-color: #ecf0f1;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+}
+
+.value-card h3 {
+    color: #e67e22;
+    margin-bottom: 10px;
+    font-size: 1.4rem;
+}
+
+/* Team Section */
+.about-us-team {
+    text-align: center;
+    padding: 2rem;
+    background-color: #f4f6f8;
+    border-radius: 12px;
+}
+
+.about-us-team h2 {
+    font-size: 1.8rem;
+    color: #2c3e50;
+}
+
+.about-us-team p {
+    font-size: 1.1rem;
+    max-width: 800px;
+    margin: 1rem auto 0;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 800px) {
+    .about-us-mission {
+        flex-direction: column;
+    }
+    .cta-button{
+        display: flex; /* Makes the button a block element */
+        margin: 0 auto !important;
+        justify-content: center !important; /* Centers horizontally */
+    }
+    .mission-image {
+        order: -1; /* Move image above text on mobile */
+    }
+}

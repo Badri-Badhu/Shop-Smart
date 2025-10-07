@@ -1,0 +1,69 @@
+/* Universal container for both pages */
+.message-container {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: center !important;
+    text-align: center !important;
+    min-height: 100vh !important;
+    padding: 2rem 1rem !important;
+    box-sizing: border-box !important;
+    font-family: sans-serif !important;
+    color: #333 !important;
+    background-color: #f8f9fa !important;
+    position: relative !important; /* Ensure children are positioned relative to this container */
+}
+
+/* Ensure the Lottie wrapper is in the normal document flow and has no conflicts */
+.err-lottie-animation-wrapper {
+    width: 400px !important;
+    height: 330px !important;
+    margin-bottom: 2rem !important;
+    position: static !important; /* Forces the element to stay in the normal flow */
+    z-index: 1;
+}
+
+/* Styles for the text content container */
+.text-content-wrapper {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    z-index: 2; /* Ensures text is always on top of the Lottie animation */
+
+}
+
+.message-title {
+    font-size: 2rem !important;
+    font-weight: 700 !important;
+    margin: 0 0 0.5rem !important;
+    color: #2c3e50 !important;
+}
+
+.message-text {
+    font-size: 1.1rem !important;
+    color: #7f8c8d !important;
+    max-width: 600px !important;
+    margin: 0 0 2rem !important;
+}
+
+.message-link {
+    text-decoration: none !important;
+    font-size: 1rem !important;
+    font-weight: 600 !important;
+    color: #fff !important;
+    background-color: #3498db !important;
+    padding: 0.75rem 1.5rem !important;
+    border-radius: 50px !important;
+    transition: background-color 0.3s ease !important;
+}
+
+.message-link:hover {
+    background-color: #2980b9 !important;
+}
+
+@media (max-width:700px) {
+    .err-lottie-animation-wrapper{
+        width: 350px !important;
+    }
+    
+}

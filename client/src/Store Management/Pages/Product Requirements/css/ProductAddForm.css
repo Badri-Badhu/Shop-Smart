@@ -1,0 +1,185 @@
+.add-product-container {
+  max-width: 800px;
+  margin: 0 auto;
+  background-color: #e6f9f7; /* light mint */
+  padding: 20px;
+  border-radius: 10px;
+}
+.loading-overlay{
+    text-align: center;
+    padding-top: 20px;
+    font-weight: bold;
+}
+
+.form-title {
+  text-align: center;
+  color: #0F9E99;
+  margin-bottom: 20px;
+}
+
+.add-product-form .form-group {
+  margin-bottom: 15px;
+}
+
+.add-product-form label {
+  display: block;
+  font-weight: 500;
+  margin-bottom: 5px;
+  color: #0c7f7b;
+}
+
+.add-product-form input,
+.add-product-form select,
+.add-product-form textarea {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+}
+
+.form-checkboxes {
+  display: flex;
+  gap: 20px;
+  margin-bottom: 15px;
+}
+
+.image-preview-wrapper {
+  position: relative;
+  display: inline-block;
+  margin-right: 10px;
+}
+
+.image-preview {
+  margin-top: 8px;
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+}
+
+.image-delete-btn {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  background-color: #0c7f7b;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  width: 25px;
+  height: 25px;
+  font-size: 16px;
+  cursor: pointer;
+  line-height: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.images-preview-container {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-top: 8px;
+}
+
+.variants-section {
+  margin-top: 20px;
+}
+
+.variant-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 50px; /* Added column for the delete button */
+  gap: 10px;
+  margin-bottom: 10px;
+  align-items: center;
+}
+.file-count {
+  display: block;
+  margin-top: 5px;
+  font-size: 14px;
+  color: #0c7f7b;
+}
+
+.hidden-file-input {
+  display: none;
+}
+
+/* 👇 Style the custom button to look like a normal input */
+.custom-file-button {
+ padding: 8px 12px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  background-color: white;
+  color: #555;
+  cursor: pointer;
+  white-space: nowrap;
+  text-align: left;
+  font-family: inherit;
+  font-size: 14px;
+  transition: all 0.2s ease-in-out;
+}
+
+.custom-file-button:hover {
+  border-color: #0F9E99;
+}
+
+.file-count {
+  display: inline-block; 
+  margin-left: 10px;
+  font-size: 14px;
+  color: #0c7f7b;
+}
+.remove-variant-btn {
+  background-color: #f44336;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  width: 35px;
+  height: 35px;
+  font-size: 20px;
+  cursor: pointer;
+  line-height: 1;
+  justify-self: center; /* Center the button in its grid cell */
+}
+
+.remove-variant-btn:hover {
+  background-color: #d32f2f;
+}
+
+.add-variant-btn {
+  background-color: #0F9E99;
+  color: #ffffff;
+  padding: 8px 12px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+.add-variant-btn:hover {
+  background-color: #0c7f7b;
+}
+
+.submit-btn {
+  background-color: #0F9E99;
+  color: #ffffff;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  display: block;
+  margin: 20px auto 0;
+  font-size: 16px;
+}
+
+.submit-btn:hover {
+  background-color: #0c7f7b;
+}
+
+/* mobile responsive */
+@media (max-width: 600px) {
+  .variant-row {
+    grid-template-columns: 1fr;
+  }
+}

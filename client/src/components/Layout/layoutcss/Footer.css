@@ -1,0 +1,57 @@
+.shopSmart-footer {
+  width: 100%;
+  background-color: #EFE9E0;
+  color: #0F9E99;
+  font-family: 'Segoe UI', sans-serif;
+  padding: 40px 20px 10px;
+  box-sizing: border-box;
+}
+
+.footer-top {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  gap: 20px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid #ccc;
+}
+
+.footer-section {
+  min-width: 200px;
+}
+
+.footer-section h4 {
+  font-size: 1.1rem;
+  margin-bottom: 10px;
+}
+
+.footer-section ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-section li {
+  margin-bottom: 8px;
+}
+
+.footer-section a {
+  text-decoration: none;
+  color: white;
+  transition: color 0.3s;
+}
+
+.footer-section a:hover {
+text-decoration: underline;}
+
+.social-icons a {
+  margin-right: 10px;
+  font-size: 20px;
+  color: white;
+}
+
+.footer-bottom {
+  text-align: center;
+  font-size: 0.9rem;
+  margin-top: 20px;
+  color: white;
+}

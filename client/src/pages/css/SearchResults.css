@@ -1,0 +1,88 @@
+/* Container for the entire search results page */
+.search-results-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    font-family: sans-serif;
+}
+
+/* Heading for the search query */
+.search-results-container h2 {
+    text-align: center;
+    margin-bottom: 2rem;
+    color: #333;
+    font-size: 2rem;
+}
+
+/* Styles for loading and error messages */
+.loading, .error {
+    text-align: center;
+    font-size: 1.2rem;
+    color: #555;
+    margin-top: 50px;
+}
+
+/* Grid container for the product list */
+.product-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+/* Styles for each individual product card */
+.product-card {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease-in-out;
+    background-color: #fff;
+    text-align: center;
+    padding: 1rem;
+}
+
+.product-card:hover {
+    transform: translateY(-5px);
+}
+
+/* Styles for the product image */
+.product-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover; /* Ensures the image covers the area without distortion */
+    border-radius: 8px;
+    margin-bottom: 10px;
+}
+
+/* Styles for product name and description */
+.product-card h3 {
+    font-size: 1.1rem;
+    margin: 0.5rem 0;
+    color: #222;
+}
+
+/* .product-card p {
+    font-size: 0.9rem;
+    color: #777;
+    margin: 0;
+    padding: 0 5px;
+} */
+
+.ser-original-price {
+  font-size: 0.9rem;
+  color: #999;
+  text-decoration: line-through;
+}
+
+.ser-product-price, .ser-discounted-price {
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+.ser-product-price {
+  color: #0f9e99;
+}
+
+.ser-discounted-price {
+  color: #e5476a;
+}

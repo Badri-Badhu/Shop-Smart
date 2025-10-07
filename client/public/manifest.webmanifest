@@ -1,0 +1,20 @@
+{
+  "name": "Shop Smart Grocery Web App",
+  "short_name": "Shop Smart By Badri",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#ffffff",
+  "icons": [
+    {
+      "src": "/shopsmartlogo-192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/shopsmartlogo-512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}

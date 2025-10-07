@@ -1,0 +1,397 @@
+/* Base Styles */
+.product-detail-page {
+  min-height: 100vh;
+  background-color: #F0FAF9;
+  /* padding: 2rem; */
+  font-family: sans-serif;
+}
+
+.loading-state,
+.error-state,
+.not-found-state {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  font-size: 1.25rem;
+  color: #333;
+}
+
+.error-state {
+  color: #ef4444; /* red-500 */
+}
+
+/* Page Layout */
+.product-detail-container {
+  max-width: 1280px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+@media (min-width: 1024px) {
+  .product-detail-container {
+    flex-direction: row;
+    gap: 3rem;
+  }
+}
+
+/* Image Gallery Section */
+.image-gallery {
+  width: 100%;
+  position: relative;
+}
+
+@media (min-width: 1024px) {
+  .image-gallery {
+    width: 66.666667%; /* 2/3 width */
+  }
+}
+
+.main-image-container {
+  position: relative;
+  overflow: hidden;
+  border-radius: 0.5rem;
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1),
+              0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  aspect-ratio: 16 / 9;
+  background-color: #fff;
+}
+
+.main-image {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  transition: transform 0.3s ease-in-out;
+}
+
+.main-image:hover {
+  transform: scale(1.05);
+}
+
+.discount-badge {
+  position: absolute;
+  top: 1rem;
+  left: 1rem;
+  background-color: #10B981; /* green-500 */
+  color: #fff;
+  font-weight: 600;
+  font-size: 0.875rem;
+  padding: 0.25rem 0.5rem;
+  border-radius: 9999px;
+}
+
+/* Mobile Carousel Buttons */
+.mobile-carousel-controls {
+  display: flex;
+  justify-content: space-between;
+  position: absolute;
+  top: 50%;
+  width: 100%;
+  transform: translateY(-50%);
+  padding: 0 1rem;
+  box-sizing: border-box;
+}
+
+.carousel-btn {
+  background-color: rgba(0, 0, 0, 0.3);
+  color: #fff;
+  border: none;
+  font-size: 1.5rem;
+  padding: 0.5rem 0.75rem;
+  border-radius: 9999px;
+  cursor: pointer;
+  transition: background-color 0.2s ease-in-out;
+}
+
+.carousel-btn:hover {
+  background-color: rgba(0, 0, 0, 0.6);
+}
+
+/* Desktop Thumbnails */
+.thumbnail-carousel {
+  display: none;
+  justify-content: center;
+  margin-top: 1rem;
+  gap: 0.5rem;
+}
+
+@media (min-width: 1024px) {
+  .thumbnail-carousel {
+    display: flex;
+  }
+}
+
+.thumbnail-image {
+  width: 5rem;
+  height: 5rem;
+  object-fit: contain;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  transition: transform 0.2s ease-in-out, border-color 0.2s ease-in-out;
+  border: 2px solid transparent;
+}
+
+.thumbnail-image:hover {
+  transform: scale(1.05);
+}
+
+.thumbnail-image.active {
+  border-color: #0f9e99;
+}
+
+/* Product Details Section */
+.product-details {
+  width: 100%;
+  padding: 1rem;
+}
+
+@media (min-width: 1024px) {
+  .product-details {
+    width: 33.333333%; /* 1/3 width */
+    padding: 0;
+  }
+}
+
+.product-name {
+  font-size: 2.25rem;
+  font-weight: 700;
+  color: #1a202c; /* gray-800 */
+  margin-bottom: 0.5rem;
+}
+
+.price-info {
+  display: flex;
+  align-items: baseline;
+  margin-bottom: 1.5rem;
+}
+
+.det-discount-price {
+  font-size: 1.875rem;
+  font-weight: 700;
+  color: #0f9e99;
+  margin-right: 0.5rem;
+}
+
+.det-original-price {
+  font-size: 1.25rem;
+  font-weight: 500;
+  color: #9ca3af; /* gray-400 */
+  text-decoration: line-through;
+  margin-right: 13px;
+}
+
+
+.section-title {
+  font-weight: 600;
+  color: #4a5568; /* gray-700 */
+  margin-bottom: 0.5rem;
+}
+
+.quantity-selector {
+  margin-bottom: 1.5rem;
+}
+
+.variants-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.variant-button {
+  padding: 0.5rem 1rem;
+  border-radius: 9999px;
+  font-weight: 500;
+  cursor: pointer;
+  background-color: #fff;
+  color: #4a5568;
+  border: 1px solid #d1d5db;
+  transition: all 0.2s ease-in-out;
+}
+
+.variant-button:hover {
+  background-color: #f3f4f6; /* gray-100 */
+}
+
+.variant-button.active {
+  background-color: #0f9e99;
+  color: #fff;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1),
+              0 2px 4px -1px rgba(0, 0, 0, 0.06);
+}
+
+.add-to-cart-button {
+  width: 100%;
+  background-color: #0f9e99;
+  color: #fff;
+  font-weight: 700;
+  font-size: 1.125rem;
+  padding: 0.75rem 1rem;
+  border-radius: 0.5rem;
+  border: none;
+  cursor: pointer;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1),
+              0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  transition: background-color 0.2s ease-in-out;
+}
+
+.add-to-cart-button:hover {
+  background-color: #0c8a81;
+}
+
+/* Product Description Section */
+.product-description-container {
+  margin-top: 2rem;
+}
+
+.description-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+}
+
+.toggle-icon {
+  width: 1.5rem;
+  height: 1.5rem;
+  color: #6b7280; /* gray-500 */
+  transition: transform 0.3s ease-in-out;
+}
+
+.toggle-icon.rotate {
+  transform: rotate(180deg);
+}
+
+.description-text {
+  margin-top: 1rem;
+  color: #4b5563; /* gray-600 */
+}
+
+
+.det-product-price, .det-discounted-price {
+  font-size:2rem;
+  font-weight: bold;
+}
+
+.det-product-price {
+  color: #0f9e99;
+  
+}
+
+.det-discounted-price {
+  color: #e5476a;
+}
+
+/* ===============================
+   Quantity Selector Styling
+=============================== */
+.quantity-input {
+  display: flex;
+  align-items: center;
+  border: 1px solid #ccc;
+  width: max-content;
+  border-radius: 6px;
+  overflow: hidden;
+  margin: 10px 0;
+  background-color: #fff;
+}
+
+.quantity-input button {
+  background-color: #f5f5f5;
+  border: none;
+  padding: 6px 12px;
+  cursor: pointer;
+  font-size: 16px;
+  color: #333;
+  transition: background-color 0.2s;
+}
+
+.quantity-input button:hover {
+  background-color: #e0e0e0;
+}
+
+.quantity-input span {
+  padding: 6px 12px;
+  min-width: 30px;
+  text-align: center;
+  font-size: 16px;
+  font-weight: 500;
+  color: #333;
+}
+
+/* ===============================
+   Variant Button Styling
+=============================== */
+.variant-button {
+  padding: 6px 12px;
+  margin: 4px;
+  border: 1px solid #ccc;
+  background-color: #fff;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.variant-button:hover {
+  background-color: #f0f0f0;
+}
+
+.variant-button.active {
+  background-color: #119b96; /* Your brand color */
+  color: #fff;
+  border-color: #119b96;
+}
+
+
+.product-header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px; /* spacing from product content */
+  background-color: #0f9e99;
+  text-align: center;
+}
+
+.back-btn {
+  background: none;
+  border: none;
+  font-size: 20px;
+  cursor: pointer;
+  color: black;
+}
+
+.header-title {
+  font-size: 2rem;
+  font-weight: 600;
+  text-align: center;
+}
+
+.product-header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  padding: 10px;
+  color: white;
+}
+
+.product-header .back-btn {
+  position: absolute;
+  left: 0px; 
+  /* The button should be transparent now */
+  background: transparent;
+  border: none;
+  font-size: 40px; /* This controls the SVG size now */
+  cursor: pointer;
+  height: 90px;
+  width: 60px; /* Add a width to match the height */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 16px;
+}
+
+/* New rule to style the SVG inside the button */
+.product-header .back-btn svg {
+  fill: white; 
+}

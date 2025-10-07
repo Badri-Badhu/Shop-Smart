@@ -1,0 +1,122 @@
+.admin-applications-container {
+  max-width: 1200px;
+  margin: 2rem auto;
+  padding: 2rem;
+}
+
+.applications-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+}
+
+.application-card {
+  background-color: #f8f9fa;
+  border-radius: 8px;
+  padding: 1.5rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  border: 1px solid #e9ecef;
+}
+
+.application-card h3 {
+  margin-top: 0;
+  color: #007bff;
+  border-bottom: 2px solid #007bff;
+  padding-bottom: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.user-details p {
+  margin: 0.5rem 0;
+  font-size: 0.9rem;
+}
+
+.action-buttons {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1.5rem;
+}
+
+/* Use your existing prof-btn styles */
+.prof-btn {
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.approve-btn {
+  background-color: #28a745;
+  color: white;
+  border: none;
+}
+
+.approve-btn:hover {
+  background-color: #218838;
+}
+
+.reject-btn {
+  background-color: #dc3545;
+  color: white;
+  border: none;
+}
+
+.reject-btn:hover {
+  background-color: #c82333;
+}
+
+/* Rejection Popup specific styles */
+.reject-textarea {
+  width: 100%;
+  min-height: 100px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  resize: vertical;
+  margin-bottom: 1rem;
+}
+
+.no-applications {
+  text-align: center;
+  font-size: 1.2rem;
+  color: #6c757d;
+  margin-top: 5rem;
+}
+/* Styling for sections */
+.application-section {
+  margin-bottom: 3rem;
+}
+
+.rejected-section {
+  border-left: 5px solid #ffc107;
+  padding-left: 20px;
+}
+
+/* Styling for rejected cards */
+.application-card.rejected-card {
+  background-color: #fff3cd;
+  border-color: #ffeeba;
+}
+
+.application-card.rejected-card h3 {
+  color: #856404;
+  border-bottom-color: #856404;
+}
+
+.rejection-reason-text {
+  font-style: italic;
+  color: #6c757d;
+  margin-top: 1rem;
+}
+
+/* New button style for "Make Pending" */
+.make-pending-btn {
+  background-color: #17a2b8;
+  color: white;
+  border: none;
+}
+
+.make-pending-btn:hover {
+  background-color: #138496;
+}

@@ -1,0 +1,215 @@
+.signup-container {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #F0FAF9;
+  font-family: sans-serif;
+  color: #333;
+}
+
+.signup-box {
+  background: white;
+  border-radius: 16px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  padding: 40px;
+  width: 100%;
+  max-width: 700px;
+}
+
+.signup-title {
+  font-size: 28px;
+  font-weight: bold;
+  color: #0F9E99;
+  margin-bottom: 24px;
+}
+
+.signup-form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.name-group,
+.dob-gender-group {
+  display: flex;
+  gap: 16px;
+}
+
+.input-group {
+  position: relative;
+  flex: 1;
+}
+
+.email-verification-group {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.email-verification-group .input-field {
+  flex: 1;
+}
+
+.verify-btn {
+  padding: 10px 15px;
+  border: none;
+  border-radius: 8px;
+  background-color: #0F9E99;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s;
+  white-space: nowrap;
+}
+
+.verify-btn:hover:enabled {
+  background-color: #0c7f7b;
+}
+
+.verify-btn:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+.verified-status {
+  color: #0c7f7b;
+  font-weight: bold;
+  white-space: nowrap;
+}
+
+.input-field {
+  width: 100%;
+  padding: 12px 12px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  background: #F0FAF9;
+  color: black;
+  font-size: 14px;
+}
+
+.input-field:focus + .input-label,
+.input-field:not(:placeholder-shown) + .input-label,
+.input-field:valid + .input-label {
+  top: -8px;
+  left: 10px;
+  font-size: 12px;
+  color: #0F9E99;
+}
+
+.input-label {
+  position: absolute;
+  top: 12px;
+  left: 12px;
+  background: #F0FAF9;
+  padding: 0 4px;
+  color: gray;
+  font-size: 14px;
+  transition: all 0.2s;
+  pointer-events: none;
+}
+
+.input-label.small {
+  top: -8px;
+}
+
+.toggle-button {
+  position: absolute;
+  right: 12px;
+  top: 12px;
+  background: none;
+  border: none;
+  color: #0F9E99;
+  font-size: 13px;
+  cursor: pointer;
+}
+
+.submit-button {
+  background-color: #0F9E99;
+  color: white;
+  font-weight: bold;
+  padding: 12px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.submit-button:hover:enabled {
+  background-color: #0c7f7b;
+}
+
+.submit-button:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+.redirect-link {
+  text-align: center;
+  font-size: 14px;
+  color: #555;
+}
+
+.link {
+  color: #0F9E99;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.link:hover {
+  text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+  .name-group, .dob-gender-group {
+    flex-direction: column;
+  }
+}
+
+.otp-input-group {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.otp-input-container {
+  flex-grow: 1;
+  position: relative;
+}
+
+.resend-otp-btn {
+  padding: 12px 15px;
+  border: none;
+  background-color: #0F9E99;
+  color: white;
+  font-weight: 500;
+  border-radius: 8px;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: background-color 0.3s ease;
+}
+
+.resend-otp-btn:disabled {
+  background-color: #cccccc;
+  cursor: not-allowed;
+}
+
+.phone-input-container {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.phone-prefix {
+  position: absolute;
+  left: 12px; /* distance from left edge of input */
+  color: #555;
+  font-weight: 500;
+  pointer-events: none; /* allows clicking inside input without selecting span */
+}
+
+.phone-field {
+  padding-left: 50px; /* leave space for +91 */
+  width: 100%;
+  box-sizing: border-box;
+}

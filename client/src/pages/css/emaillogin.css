@@ -1,0 +1,93 @@
+/* phonelogin.css */
+
+.phone-wrapper {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #F0FAF9;
+  font-family: sans-serif;
+  color: #333;
+}
+
+.phone-box {
+  width: 100%;
+  max-width: 400px;
+  background-color: #fff;
+  padding: 2.5rem;
+  border-radius: 1rem;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.phone-heading {
+  font-size: 1.875rem;
+  font-weight: bold;
+  color: #0F9E99;
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+.phone-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.input-group {
+  position: relative;
+}
+
+.input-field {
+  width: 100%;
+  padding: 0.75rem;
+  padding-right: 4rem;
+  border: 1px solid #ccc;
+  border-radius: 0.5rem;
+  background-color: #F0FAF9;
+  color: #000;
+  font-size: 1rem;
+}
+
+.input-label {
+  position: absolute;
+  top: 0.75rem;
+  left: 0.75rem;
+  background-color: #F0FAF9;
+  padding: 0 0.25rem;
+  font-size: 0.875rem;
+  color: #666;
+  transition: all 0.2s ease;
+  pointer-events: none;
+}
+
+.input-field:focus + .input-label,
+.input-field:not(:placeholder-shown) + .input-label {
+  top: -0.5rem;
+  font-size: 0.75rem;
+  color: #0F9E99;
+}
+
+.send-button,
+.verify-button {
+  width: 100%;
+  background-color: #0F9E99;
+  color: #fff;
+  font-weight: 600;
+  padding: 0.75rem;
+  border-radius: 0.5rem;
+  border: none;
+  transition: background-color 0.3s ease;
+  cursor: pointer;
+}
+
+.send-button:hover,
+.verify-button:hover {
+  background-color: #0c7f7b;
+}
+
+.flash-message {
+  text-align: center;
+  font-size: 0.875rem;
+  color: #d32f2f;
+  margin-top: 1rem;
+}
