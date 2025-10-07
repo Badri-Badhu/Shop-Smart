@@ -27,6 +27,10 @@ export default defineConfig({
             type: 'image/png'
           }
         ]
+      },
+      // ✅ Add this part to fix build error
+      workbox: {
+        maximumFileSizeToCacheInBytes: 5 * 1024 * 1024, // allow files up to 5 MB
       }
     })
   ],
