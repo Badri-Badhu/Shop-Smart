@@ -208,7 +208,7 @@ const ProductDetail = () => {
               </div>
             </div>
           )}
-        {userinfo?role!=="dealer"&&(
+        {userinfo?.role!=="dealer"&&(
           <button onClick={handleAddToCart} className="add-to-cart-button">
             Add to Cart
           </button>
