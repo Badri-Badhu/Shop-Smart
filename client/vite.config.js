@@ -20,12 +20,12 @@ export default defineConfig({
         theme_color: '#ffffff',
         icons: [
           {
-            src: '/shopsmarticon.png',
+            src: '/shopsmartlogo-192.png',
             sizes: '192x192',
             type: 'image/png'
           },
           {
-            src: '/shopsmarticon.png',
+            src: '/shopsmartlogo-512.png',
             sizes: '512x512',
             type: 'image/png'
           }
