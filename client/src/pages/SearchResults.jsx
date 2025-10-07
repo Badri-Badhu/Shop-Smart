@@ -106,7 +106,7 @@ const SearchResults = () => {
                       </>
                     ) : <p className="ser-product-price">₹ {selectedVariant.price.toFixed(2)}</p>}
                   </div>
-                {userObject.role!=="dealer"&&(
+                {userObject?role!=="dealer"&&(
                   <button className="add-btn" onClick={e => handleAddToCart(product._id, e)}>
                     Add to Cart
                   </button>)}
