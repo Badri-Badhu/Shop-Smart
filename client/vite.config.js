@@ -2,22 +2,25 @@ import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
 import { VitePWA } from 'vite-plugin-pwa'
 
-// https://vite.dev/config/
 export default defineConfig({
   plugins: [
     react(),
     VitePWA({
       registerType: 'autoUpdate',
+      // ✅ Add this line block
+      workbox: {
+        maximumFileSizeToCacheInBytes: 10 * 1024 * 1024, 
+      },
       manifest: {
-        name: 'Shop Smart Grocery Web App',          
-        short_name: 'Shop Smart By Badri',            
-        start_url: '/',                   
-        display: 'standalone',            
-        background_color: '#ffffff',      
-        theme_color: '#ffffff',           
+        name: 'Shop Smart Grocery Web App',
+        short_name: 'Shop Smart By Badri',
+        start_url: '/',
+        display: 'standalone',
+        background_color: '#ffffff',
+        theme_color: '#ffffff',
         icons: [
           {
-            src: "/shopsmarticon.png",
+            src: '/shopsmarticon.png',
             sizes: '192x192',
             type: 'image/png'
           },
@@ -27,10 +30,6 @@ export default defineConfig({
             type: 'image/png'
           }
         ]
-      },
-      // ✅ Add this part to fix build error
-      workbox: {
-        maximumFileSizeToCacheInBytes: 5 * 1024 * 1024, // allow files up to 5 MB
       }
     })
   ],
