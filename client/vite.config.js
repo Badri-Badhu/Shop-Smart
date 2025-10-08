@@ -8,14 +8,15 @@ export default defineConfig({
     react(),
     VitePWA({
       registerType: 'autoUpdate',
-      manifest: false, // ❌ Disable inline manifest
+      manifest: false, 
       injectRegister: 'auto',
       strategies: 'generateSW',
       workbox: {
         cleanupOutdatedCaches: true,
+        maximumFileSizeToCacheInBytes: 10 * 1024 * 1024 
       },
       devOptions: {
-        enabled: true, // Allows PWA testing in dev
+        enabled: true,
       }
     })
   ],
