@@ -97,7 +97,7 @@ const DealerOrderPage = () => {
         );
     }    
     return (
-        <div className="order-history-page">
+        <div className="order-history-page" style={{padding:"0"}}>
             {flash.show && (
                 <FlashMessage
                     message={flash.message}
