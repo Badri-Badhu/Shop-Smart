@@ -70,7 +70,7 @@ const ProductManagement = () => {
       </div>
 
       {/* Content */}
-      <div className="product-content">
+      <div className={`product-content${activeTab === "orders" ? "no-padding" : ""}`}>
         {activeTab === "productadder" && <ProductAddForm showFlash={showFlash} />}
         {activeTab === "producthandler" && (
           <ProductHandler showFlash={showFlash} />
