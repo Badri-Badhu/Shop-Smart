@@ -41,7 +41,6 @@ const sendBrevoEmail = async (toEmail, subject, htmlContent) => {
       subject,
       htmlContent,
     });
-    console.log(`✅ Email sent to ${toEmail}`);
   } catch (error) {
     console.error("❌ Brevo email error:", error);
     throw error;
